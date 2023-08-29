@@ -1,13 +1,14 @@
 import React from 'react'
 import './Header.css'
+import {Link} from 'react-router-dom'
 
 const Header = () => {
     return (
-        <>
+        <div className='position-sticky top-0 z-1'>
             <div className="container-fluid text-bg-dark">
                 <div className="d-flex justify-content-evenly align-items-center py-3">
                     <div className="col-md-2 logo-section">
-                        <a className="badge text-bg-danger p-2" href="#">Online-Store</a>
+                        <Link className="badge text-bg-danger p-2" to="/">Online-Store</Link>
                     </div>
                     <div className="col-md-7">
                         <form className="d-flex" role="search">
@@ -20,28 +21,28 @@ const Header = () => {
                     <div className="col-md-3">
                         <div className="d-flex justify-content-end align-items-center ps-5">
                             <div className="col-4">
-                                <a href="#" className='text-decoration-none'>
+                                <Link to="#" className='text-decoration-none'>
                                     <button className="btn btn-danger d-flex gap-2 align-items-center">
                                         <i class="fa-solid fa-right-to-bracket"></i>
                                         Sign in
                                     </button>
-                                </a>
+                                </Link>
                             </div>
                             <div className="col-4">
-                                <a href="#" className='text-decoration-none'>
+                                <Link to="#" className='text-decoration-none'>
                                     <button className="btn btn-danger d-flex gap-2 align-items-center">
                                         <i class="fa-solid fa-user-plus"></i>
                                         Sign Up
                                     </button>
-                                </a>
+                                </Link>
                             </div>
                             <div className="col-4">
-                                <a href="/cart" className='text-decoration-none'>
+                                <Link to="/cart" className='text-decoration-none'>
                                     <button className="btn btn-warning d-flex gap-2 align-items-center">
                                         <i class="fa-solid fa-cart-shopping fs-5"></i>
                                         Cart
                                     </button>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -55,30 +56,30 @@ const Header = () => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                                <Link className="nav-link active" aria-current="page" to="#">Home</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Link</a>
+                                <Link className="nav-link" to="#">Link</Link>
                             </li>
                             <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <Link className="nav-link dropdown-toggle" to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
-                                </a>
+                                </Link>
                                 <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
+                                    <li><Link className="dropdown-item" to="#">Action</Link></li>
+                                    <li><Link className="dropdown-item" to="#">Another action</Link></li>
                                     <li><hr className="dropdown-divider" /></li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                    <li><Link className="dropdown-item" to="#">Something else here</Link></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+                                <Link className="nav-link disabled" aria-disabled="true">Disabled</Link>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        </>
+        </div>
     )
 }
 

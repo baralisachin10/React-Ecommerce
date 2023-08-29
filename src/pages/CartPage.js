@@ -1,5 +1,6 @@
 import React from 'react'
 import CartItem from '../components/CartItem'
+import Header from '../components/Header'
 
 const CartPage = () => {
     const cartItems = [
@@ -26,8 +27,10 @@ const CartPage = () => {
 
     ]
   return (
+    <>
+    <Header/>
     <div className="container-fluid">
-        <h2 className="text-center text-muted mt-5">
+        <h2 className="text-center text-muted mt-3">
             Your Cart Items
         </h2>
         <div className="d-flex justify-content-around align-items-center mt-5">
@@ -52,6 +55,7 @@ const CartPage = () => {
             </div>
         </div>
     </div>
+    </>
   )
 }
 
