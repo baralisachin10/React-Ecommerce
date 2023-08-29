@@ -4,11 +4,11 @@ const CartItem = (props) => {
     let [increment, setIncrement] = useState(1)
 
     const incrementController=()=>{
-        setIncrement(increment++);
+        setIncrement(++increment);
     }
 
     const decrementController=()=>{
-        setIncrement(increment--);
+        setIncrement(--increment);
     }
     return (
         <>

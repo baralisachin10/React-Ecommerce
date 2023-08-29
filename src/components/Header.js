@@ -7,10 +7,10 @@ const Header = () => {
         <div className='position-sticky top-0 z-1'>
             <div className="container-fluid text-bg-dark">
                 <div className="d-flex justify-content-evenly align-items-center py-3">
-                    <div className="col-md-2 logo-section">
+                    <div className="col-sm-12 col-md-2 logo-section">
                         <Link className="badge text-bg-danger p-2" to="/">Online-Store</Link>
                     </div>
-                    <div className="col-md-7">
+                    <div className="col-sm-12 col-md-7">
                         <form className="d-flex" role="search">
                             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                             <button className="btn btn-outline-warning" type="submit" id="search-button">
@@ -18,10 +18,10 @@ const Header = () => {
                             </button>
                         </form>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-sm-12 col-md-3">
                         <div className="d-flex justify-content-end align-items-center ps-5">
                             <div className="col-4">
-                                <Link to="#" className='text-decoration-none'>
+                                <Link to="/login" className='text-decoration-none'>
                                     <button className="btn btn-danger d-flex gap-2 align-items-center">
                                         <i class="fa-solid fa-right-to-bracket"></i>
                                         Sign in
@@ -29,7 +29,7 @@ const Header = () => {
                                 </Link>
                             </div>
                             <div className="col-4">
-                                <Link to="#" className='text-decoration-none'>
+                                <Link to="/register" className='text-decoration-none'>
                                     <button className="btn btn-danger d-flex gap-2 align-items-center">
                                         <i class="fa-solid fa-user-plus"></i>
                                         Sign Up
