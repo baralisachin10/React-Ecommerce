@@ -1,10 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
-import Cart from './components/Cart';
+// import CartPage from './pages/CartPage';
+import MyRouter from './MyRouter';
 
 function App() {
   return (
-    <Cart/>
+    <MyRouter/>
   );
 }
 

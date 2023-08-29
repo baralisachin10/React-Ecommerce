@@ -1,7 +1,7 @@
 import React from 'react'
-import CartItem from './CartItem'
+import CartItem from '../components/CartItem'
 
-const Cart = () => {
+const CartPage = () => {
     const cartItems = [
         {
             product_image: "https://images-eu.ssl-images-amazon.com/images/G/31/img22/Wearables/PC_CategoryCard_379X304_1._SY304_CB614835787_.jpg",
@@ -33,8 +33,8 @@ const Cart = () => {
         <div className="d-flex justify-content-around align-items-center mt-5">
             <div className="col-md-8">
                 {
-                    cartItems.map((cartItem)=>{
-                        return <CartItem product_image={cartItem.product_image} product_title={cartItem.product_title} product_price={cartItem.product_price} />
+                    cartItems.map((cartItem,index)=>{
+                        return <CartItem product_image={cartItem.product_image} product_title={cartItem.product_title} product_price={cartItem.product_price} key={index} />
                     })
                 }
             </div>
@@ -55,4 +55,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default CartPage
